@@ -33,11 +33,11 @@ registerBlockType('gutenberg-block/quizapp', {
 	 */
 	edit: function (props) {
 		const blockProps = useBlockProps();
+		console.log(props.attributes);
 		return (
 			<div {...blockProps}>
 				<ServerSideRender
 					block="gutenberg-block/quizapp"
-					attributes={props.attributes}
 				/>
 			</div>
 		);

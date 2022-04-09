@@ -27,16 +27,6 @@ define( 'QUIZ_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 define( 'QUIZ_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'QUIZ_PLUGIN_VERSION', '1.0.0' );
 
-// Register Block type
-// function create_block_quiz_app_block_init() {
-// 	//register_block_type( __DIR__ . '/build' );
-// 	register_block_type( 'gutenberg-block/quizapp', array(
-//         'api_version' => 2,
-//         'editor_script' => __DIR__ . '/build',
-//         'render_callback' => 'gutenberg_examples_dynamic_render_callback'
-//     ) );
-// }
-// add_action( 'init', 'create_block_quiz_app_block_init' );
 
 // register custom post type
 require_once QUIZ_PLUGIN_PATH . 'inc/cpt.php';
@@ -57,14 +47,13 @@ function dynamic_content_for_quiz() {
         $asset_file['dependencies'],
         $asset_file['version']
     );
- 
+
     register_block_type( 'gutenberg-block/quizapp', array(
         'api_version' => 2,
 		"title" => "Quiz App",
         'editor_script' => 'load-editor-script',
         'render_callback' => 'render_template'
     ) );
- 
 }
 add_action( 'init', 'dynamic_content_for_quiz' );
 

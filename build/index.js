@@ -56,9 +56,9 @@ __webpack_require__.r(__webpack_exports__);
    */
   edit: function (props) {
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)();
+    console.log(props.attributes);
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)((_wordpress_server_side_render__WEBPACK_IMPORTED_MODULE_2___default()), {
-      block: "gutenberg-block/quizapp",
-      attributes: props.attributes
+      block: "gutenberg-block/quizapp"
     }));
   },
 
