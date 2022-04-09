@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"version": "0.1.0",
+	"name": "gutenberg-block/quizapp",
+	"title": "Quiz App",
+	"icon": "smiley",
+	"textdomain": "quiz_app",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
